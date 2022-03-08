@@ -1,0 +1,252 @@
+/********************************/
+/*  Projet OpenClassrooms       */
+/*    Projet 03 OHMYFOOD        */
+/*                              */
+/* 11-02-2022                   */
+/********************************/
+/*  elements de base */
+/****************************************************/
+/* 1 box-sizing est appliqué à tous les éléments    */
+/****************************************************/
+* { /* 1 */
+    box-sizing: border-box;
+}
+/* Google font "Roboto" pour toute la page*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 160%;
+    margin: 30px 45px 0 45px;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    margin-left: 35px;
+}
+h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0 0 18px 0;
+    padding: 0;
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 8px 0 0 10px;
+}
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+}
+p{
+    font-size: 90%;
+    margin: 8px 0 0 10px;
+}
+a {
+    color: black;
+}
+img {
+    width: 100%;
+}
+/********  header   ******/
+.flex-header {
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.flex-menu-header {
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center; 
+}
+.icon-retour-acceuil {
+    margin-left: 30px;
+}
+/******* logo OHMYFOOD  *******/
+#logo {
+    text-align: center;
+    width: 392px;
+    height: 68px;
+    margin-top: 30px;
+}
+.dimention-logo {
+    width: 65%;
+}
+.cadre-photo-restaurants {
+    width: 100%;
+    height: 300px;
+}
+.photo-header {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    padding-right: 16px;
+    object-fit: cover;
+    z-index: -1;
+}
+.ville {
+    min-width: 420px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.saisie-ville {
+    border: none;
+    background-color: #f2f2f2; 
+    margin: 15px;
+}
+.centrer {
+    text-align: center;
+}
+.btn-explorer-restaurants {
+    width: 200px;
+    height: 45px;
+    color:white;
+    background-color: #9356dc;
+    background-image: linear-gradient(#c386fc,#9356dc);
+    border-radius: 25px;
+    border: none;
+    margin: 20px 0 65px 0;
+}
+.flex-fonctionnement {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.fonctionnement {
+    width: 300px;
+    height: 45px;
+    text-align: center;
+    margin: 15px 0 15px 0;
+    padding-top: 12px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+.numero {
+    width: 30px;
+    height: 30px;
+    font-size: 60%;
+    color: white;
+    background-color: #9356dc;
+    margin-right: 30px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.text-fonctionnement {
+    font-size: 80%;
+    font-weight: bold;
+    margin: 0 50px 0 25px;
+}
+.cadre-titres-restaurants {
+    position: static;
+    border-radius: 50px;
+    padding: 30px;
+    background-color: #f2f2f2;
+    z-index: 2;
+}
+.titres-restaurants {
+    font-family: 'Shrikhand', cursive;
+    font-size: 180%;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 0 18px 0;
+    padding: 0;
+}
+.titres-menu {
+    color: black;
+    margin: 25px 0 0 10px;
+}
+.tiret {
+    width: 50px;
+    height: 1px;
+    margin-left: 10px;
+    border: 2px solid #99e2d0;
+}
+/*********   restaurants    ********/
+/*** polariod en mode pc ecrans > 992 px => hauteur = 500px   ****/
+.polaroid-restaurants {
+    width: 95%;
+    height: 800px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/***** polaroid en mode tablette ecrans entre 768 et 992 px hauteur => 450px *****/
+@media screen and (max-width: 992px ) {
+.polaroid-restaurants {
+    height: 450px;
+}
+}
+/***** polaroid en mode mobils ecrans entre  < 768^px et 992 px hauteur => 300px *****/
+@media screen and (max-width: 768px ) {
+.polaroid-restaurants {
+    height: 300px;
+}
+}
+.photo-restaurants {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+.coeur {
+    float: right;
+    font-size: 200%;
+    margin-right: 30px;
+}
+.btn-commander {
+    width: 200px;
+    height: 45px;
+    color:white;
+    background-color: #9356dc;
+    background-image: linear-gradient(#c386fc,#9356dc);
+    border-radius: 25px;
+    border: none;
+    margin: 20px 0 65px 0;
+}
+.cadre-menu {
+    width: 400px;
+    height: 75px;
+    background-color:#f2f2f2;
+    margin: 20px 0 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.descriptions-menu {
+    margin-top: 10px;
+    padding: 8px 0 0 10px;
+}
+.tarifs-menu {
+    float: right;
+    font-weight: bold;
+    padding-right: 15px;
+}
+/********  Pied de Page   ********/
+.pied-de-page {
+    color: white;
+    background-color: black;
+    text-align: left;
+    margin: 25px 10px 25px 10px;
+    padding: 25px 0 25px 25px;
+}
+.lignes-footer {
+    margin: 0 15px 10px 0;
+}
+.liens-footer{
+    text-decoration: none;
+    color: white;
+}
+.icon-footer-utensils {
+    padding-right: 20px;
+}
+.icon-footer-handshake {
+    padding-right: 14px;
+}
+/*****   Fin du code CSS    ********/

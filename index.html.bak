@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
     <head>
-        <!-- 08 03 2022 -->
+        <!-- 11 02 2022 -->
 		<!-- Titre de la page-->
         <title>Openclassrooms Projet-03 OHMYFOOD Accueil</title>
         <!-- Etiquettes meta -->
@@ -100,9 +100,9 @@
                 <h3>ohmyfood</h3>
                 <div>
                     <div class="lignes-footer"><span class="icon-footer-utensils"><i class="fa fa-utensils"></i></span><a class="liens-footer" href="#">Proposer un restaurant</a></div>
-                    <div class="lignes-footer"><span class="icon-footer-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-footer" href="#">Devenir partenaire</a></div>
-                    <div class="lignes-footer"><a class="liens-footer" href="#">Mentions légales</a></div>
-                    <div class="lignes-footer"><a class="liens-footer" href="#">Contact</a></div>
+                    <div class="lignes-footer"><span class="icon-footer-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-footer"href="#">Devenir partenaire</a></div>
+                    <div class="lignes-footer"><a class="liens-footer"href="#">Mentions légales</a></div>
+                    <div class="lignes-footer"><a class="liens-footer"href="#">Contact</a></div>
                 </div>
             </div>
         </footer><!-- Fin de la section pied-de-page -->
