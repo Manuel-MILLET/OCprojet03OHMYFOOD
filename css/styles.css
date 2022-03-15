@@ -19,7 +19,10 @@ body, h1, h2, h3, h4, h5, h6, p ,hr {
 }
 a {
     color: black;
+<<<<<<< HEAD
     text-decoration: none;
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 img {
     width: 100%;
@@ -44,8 +47,12 @@ ol {
     align-items: center;
 }
 .icon-retour-acceuil {
+<<<<<<< HEAD
     float: left;
     margin: 20px 0 0 30px;
+=======
+    margin-left: 30px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 /******* logo OHMYFOOD  *******/
 #logo {
@@ -63,13 +70,22 @@ ol {
 /********* header **************/
 .cadre-photo-restaurants {
     width: 100%;
+<<<<<<< HEAD
     height: 450px;
+=======
+    height: 300px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 .photo-header {
     position: absolute;
     width: 100%;
+<<<<<<< HEAD
     height: 500px;
     padding: 0;
+=======
+    height: 350px;
+    padding-right: 16px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     object-fit: cover;
     z-index: -1;
 }
@@ -90,7 +106,11 @@ ol {
 }
 .fond-gris-blanc {
     width: 100%;
+<<<<<<< HEAD
     height: 390px;
+=======
+    height: 500px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     background-color: white;
 }
 .slogan {
@@ -101,10 +121,13 @@ ol {
 .decouvrez{
     font-size: 145%;
 }
+<<<<<<< HEAD
 .explorer {
     display: flex;
     justify-content: center;
 }
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 .btn-explorer-restaurants {
     width: 320px;
     height: 70px;
@@ -113,11 +136,15 @@ ol {
     background-color: #9356dc;
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 35px;
+<<<<<<< HEAD
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
     margin: 20px 0 110px 0;
 }
+<<<<<<< HEAD
 .btn-explorer-restaurants:hover {
     -webkit-box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8); 
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
@@ -126,6 +153,11 @@ ol {
 .espace {
     width: 100%;
     height: 50px;
+=======
+.espace {
+    width: 100%;
+    height: 100px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 /**********  Section fonctionnement   **********/
 .positionnement-fonctionnement {
@@ -148,7 +180,11 @@ ol {
     display: flex;
     flex-flow: row nowrap;
     align-content: center;
+<<<<<<< HEAD
     position: relative;
+=======
+    position:relative;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     width: 510px;
     height: 80px;
     text-align: center;
@@ -194,15 +230,22 @@ ol {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+<<<<<<< HEAD
     margin: 0 15px;
 }
 .cadre-titres-restaurants {
     width: 100%;
+=======
+}
+.cadre-titres-restaurants {
+    position: static;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     border-radius: 50px;
     padding: 30px;
     background-color: #f2f2f2;
     z-index: 2;
 }
+<<<<<<< HEAD
 .nouveau {
     position: absolute;
     right: 20px;
@@ -228,6 +271,9 @@ ol {
 }
 .titres-restaurants {
     display: inline;
+=======
+.titres-restaurants {
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     font-family: 'Shrikhand', cursive;
     font-size: 180%;
     font-weight: normal;
@@ -235,11 +281,14 @@ ol {
     margin: 0 0 18px 0;
     padding: 0;
 }
+<<<<<<< HEAD
 .menu-edition {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 .titres-menu {
     color: black;
     margin: 25px 0 0 10px;
@@ -250,6 +299,10 @@ ol {
     margin-left: 10px;
     border: 2px solid #99e2d0;
 }
+<<<<<<< HEAD
+=======
+/*********   restaurants    ********/
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 .photo-restaurants {
     width: 100%;
     height: 70%;
@@ -273,6 +326,7 @@ ol {
     height: 45px;
     color:white;
     background-color: #9356dc;
+<<<<<<< HEAD
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 25px;
     border: none;
@@ -284,16 +338,27 @@ ol {
     -webkit-box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8); 
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
+=======
+    background-image: linear-gradient(#c386fc,#9356dc);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 0 65px 0;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 .cadre-menu {
     width: 400px;
     height: 75px;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     background-color:#f2f2f2;
     margin: 20px 0 0 10px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+<<<<<<< HEAD
 .cadre-menu:active {
     animation-name: mouvement;
 	animation-duration: 2s;
@@ -303,6 +368,11 @@ ol {
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 15px 0 0 20px;
+=======
+.descriptions-menu {
+    margin-top: 10px;
+    padding: 8px 0 0 10px;
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 .tarifs-menu {
     float: right;
@@ -344,11 +414,17 @@ ol {
 .icon-footer-handshake {
     padding-right: 14px;
 }
+<<<<<<< HEAD
 /******   Fin du css footer   ********/
 /************* Media Queries  *******/
 /*** polariod en mode pc ecrans > 992 px => hauteur = 500px   ****/
 .polaroid-restaurants {
     position: relative;
+=======
+/************* Media Queries *******/
+/*** polariod en mode pc ecrans > 992 px => hauteur = 500px   ****/
+.polaroid-restaurants {
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
     width: 20%;
     height: 300px;
     margin: 10px;
@@ -401,6 +477,7 @@ ol {
     .menu-fonctionnement {
         width: 380px;
     }
+<<<<<<< HEAD
     .liste-fonctionnement {
         display: flex;
         flex-flow: column nowrap;
@@ -412,5 +489,7 @@ ol {
 @keyframes mouvement {
 	from {top: 20px;}
 	to {top: 0px;}
+=======
+>>>>>>> 85592174d92262707fa9acfccfa66d7336c82d51
 }
 /*****   Fin du code CSS    ********/
