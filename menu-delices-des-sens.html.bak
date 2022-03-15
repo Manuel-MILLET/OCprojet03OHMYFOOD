@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <!-- 11 02 2022 -->
+		<!-- Titre de la page-->
+        <title>Openclassrooms Projet-03 OHMYFOOD menu 04</title>
+        <!-- Etiquettes meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Liens -->
+        <!-- Fichier CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- CDN police Google Shrikhand pour les titres et le logo    -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <!-- CDN police Google Roboto pour le texte-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- CDN fontawesome 5.13.0 liens pour les icons font awesome  -->
+        <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/70a13da351.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header><!-- entête avec logo + choix du restaurant -->
+            <div class="flex-menu-header">
+                <div>
+                    <a href="index.html"><span class="icon-retour-acceuil"><i class="fa fa-arrow-left fa-xl"></i></span></a>
+                </div>
+                <div id="logo">
+                    <img class="dimention-logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood">
+                </div>
+            </div>
+            <div class="cadre-photo-restaurants">
+                <img class="photo-header" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="la la-palette-du-gout">
+            </div>
+            <div class="cadre-titres-restaurants">
+                <span class="titres-restaurants">Le délice des sens<a href="#"></span><span class="coeur"><i class="far fa-heart"></i></span></a>
+            </div>
+        </header>
+        <main><!-- section Main -->
+            <section id="entrees">
+                <div class="titres-menu">ENTRÉES</div>
+                <div class="tiret"></div>
+                <div class="cadre-menu">
+                    <h5>Tartare de thon</h5>
+                    <span class="descriptions-menu">Assaisonné au yuzu</span><span class="tarifs-menu">25€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Bouché de homard croustillant</h5>
+                    <span class="descriptions-menu">Et sa farandole depetits légumes</span><span class="tarifs-menu">35€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Velouté de cèpes</h5>
+                    <span class="descriptions-menu">Aux truffes</span><span class="tarifs-menu">20€</span>
+                </div>
+            </section>
+            <section id="plats">
+                <div class="titres-menu">PLATS</div>
+                <div class="tiret"></div>
+                <div class="cadre-menu">
+                    <h5>Poulet rôti aux herbes de provence</h5>
+                    <span class="descriptions-menu">Et sa crème de truffe</span><span class="tarifs-menu">40€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Langouste rôtie</h5>
+                    <span class="descriptions-menu">Et ses légumes de saison</span><span class="tarifs-menu">35€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Côte de bœuf Angus</h5>
+                    <span class="descriptions-menu"></span>Et sa purée de panais<span class="tarifs-menu">44€</span>
+                </div>
+            </section>
+            <section id="desserts">
+                <div class="titres-menu">DESSERTS</div>
+                <div class="tiret"></div>
+                <div class="cadre-menu">
+                    <h5>Farandole de desserts</h5>
+                    <span class="descriptions-menu">Du chef</span><span class="tarifs-menu">18€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Crème brulée</h5>
+                    <span class="descriptions-menu">Revisitée</span><span class="tarifs-menu">22€</span>
+                </div>
+                <div class="cadre-menu">
+                    <h5>Tiramisu</h5>
+                    <span class="descriptions-menu">À la noisette</span><span class="tarifs-menu">23€</span>
+                </div>
+
+                <div class="centrer">
+                    <button class="btn-commander">Commander</button>
+                </div>
+			</section>	
+        </main><!-- Fin de la section principale -->
+        <footer><!-- Section pied-de-page -->
+            <div class="pied-de-page">
+                <h3>ohmyfood</h3>
+                <div>
+                    <div class="lignes-footer"><span class="icon-footer-utensils"><i class="fa fa-utensils"></i></span><a class="liens-footer" href="#">Proposer un restaurant</a></div>
+                    <div class="lignes-footer"><span class="icon-footer-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-footer" href="#">Devenir partenaire</a></div>
+                    <div class="lignes-footer"><a class="liens-footer" href="#">Mentions légales</a></div>
+                    <div class="lignes-footer"><a class="liens-footer" href="#">Contact</a></div>
+                </div>
+            </div>
+        </footer><!-- Fin de la section pied-de-page -->
+    </body>
+</html>
+<!-- Fin de la page HTML -->
