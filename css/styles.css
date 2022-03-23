@@ -1,17 +1,20 @@
-/********************************/
-/*  Projet OpenClassrooms       */
-/*    Projet 03 OHMYFOOD        */
-/*                              */
-/* 13-03-2022                   */
-/********************************/
+/***********************************/
+/*                                 */
+/*  Formation OpenClassrooms       */
+/*  Developpeur WEB                */
+/*  Manuel MILLET                  */
+/*  Projet 03 OHMYFOOD             */
+/*                                 */
+/* 23-03-2022                      */
+/***********************************/
 /*  elements de base */
 /****************************************************/
-/* 1 box-sizing est appliqué à tous les éléments    */
+/*   box-sizing est appliqué à tous les éléments    */
 /****************************************************/
-* { /* 1 */
+* {
     box-sizing: border-box;
 }
-/* Google font "Roboto" pour toute la page*/
+/* Google font "Roboto" pour toute la page body et titres + paragraphes*/
 body, h1, h2, h3, h4, h5, h6, p ,hr {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -30,6 +33,73 @@ ol {
 .centrer {
     text-align: center;
 }
+/******** loader spinner  ****/
+#chargement {
+	display: block;
+	font-family: sans-serif;
+	font-size: 40px;
+    width: 100%;
+	height: 100%;
+	line-height: 1000px;
+	color: black;
+	background-color: #f2f2f2;	
+	margin: 0;
+	padding: 0;
+}
+.loader {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	border: 12px solid #9356dc;
+	border-radius: 50px;
+}
+.ch1::before {
+	content:'';
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	bottom: -12px;
+	left: -12px;
+	border: 12px solid transparent;
+	border-top-color: #ff79da;
+	border-right-color: #ff79da;
+	border-radius: 50px;
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes spin {
+	0%{transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); };
+}
+.ch2::after {
+	content:'';
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	bottom: -12px;
+	left: -12px;
+	border: 12px solid transparent;
+	border-bottom-color: #99e2d0;
+	border-left-color: #99e2d0;
+	border-radius: 50px;
+	animation-name: spin-reverse;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes spin-reverse {
+	0%{ transform: rotate(0deg); }
+	100%{ transform: rotate(-360deg); }
+}
+/*** fin du loader spinner ****/
+/******** Section Principale "main"   *****/
+#principale {
+    display: none;
+}
 /********  header   ******/
 .flex-header {
     display:flex;
@@ -43,10 +113,6 @@ ol {
     flex-flow: row nowrap;
     align-items: center;
 }
-.icon-retour-acceuil {
-    float: left;
-    margin: 20px 0 0 30px;
-}
 /******* logo OHMYFOOD  *******/
 #logo {
     font-family: 'Shrikhand', cursive;
@@ -59,19 +125,6 @@ ol {
     height: 13px;
     background-image: linear-gradient(#d2d2d2, #f2f2f2);
     border-top: 1px solid white;
-}
-/********* header **************/
-.cadre-photo-restaurants {
-    width: 100%;
-    height: 450px;
-}
-.photo-header {
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    padding: 0;
-    object-fit: cover;
-    z-index: -1;
 }
 .flex-ville {
     display: flex;
@@ -151,7 +204,6 @@ ol {
     position: relative;
     width: 510px;
     height: 80px;
-    text-align: center;
     margin: 15px 0 15px 0;
     padding-top: 25px;
     background-color: #f2f2f2;
@@ -181,7 +233,6 @@ ol {
     font-weight: bold;
     margin-left: 25px;
 }
-/******** section restaurants  *********/
 .positionnement-restaurants {
     background-color: #f2f2f2;
 }
@@ -197,6 +248,9 @@ ol {
     margin: 0 15px;
 }
 .cadre-titres-restaurants {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     width: 100%;
     border-radius: 50px;
     padding: 30px;
@@ -213,6 +267,71 @@ ol {
     background-color: #99e2d0;
     padding: 10px 0;
 }
+/******** remplissage des coeurs  *******/
+.coeur-n1 {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	z-index: 1;
+	top: 237px;
+	left: 315px;
+	color:red;
+}
+.coeur-n2 {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	z-index: 2;
+	top: 237px;
+	left: 315px;
+	transition: height 3.5s;
+}
+.coeur-n3 {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	z-index: 3;
+	top: 237px;
+	left: 315px;
+	color:black;
+	background-color: transparent;
+}
+.remplir {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	z-index: 4;
+	top: 237px;
+	left: 315px;
+	background-color: transparent;
+}
+.remplir:hover + .coeur-n2 {
+	height: 0;
+}
+.fond-gris {
+    background-color: #f2f2f2;
+}
+.fond-blanc {
+    background-color: white;
+}
+/********* fin du remplissage des coeurs
+/******** pages details des restaurants  *********/
+.icon-retour-acceuil {
+    float: left;
+    margin: 20px 0 0 30px;
+}
+.cadre-photo-restaurants {
+    width: 100%;
+    height: 450px;
+}
+.photo-header {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    object-fit: cover;
+    z-index: -1;
+}
 .menu-wrap {
     display: flex ;
     flex-direction: row;
@@ -227,11 +346,11 @@ ol {
     border-radius: 30px 30px 0 0;
 }
 .titres-restaurants {
-    display: inline;
+    display: flex;
+    position: relative;
     font-family: 'Shrikhand', cursive;
     font-size: 180%;
     font-weight: normal;
-    text-align: center;
     margin: 0 0 18px 0;
     padding: 0;
 }
@@ -263,10 +382,82 @@ ol {
 .legend-retaurant {
     font-size: 100%;
 }
-.coeur {
-    float: right;
-    font-size: 200%;
-    margin-right: 30px;
+.coeur-restaurant {
+    position: absolute;
+    top: 365px;
+    left: 1220px;
+    background-color: #f2f2f2;
+}
+.cadre-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 400px;
+    height: 75px;
+    position: relative;
+    background-color:#f2f2f2;
+    margin: 20px 0 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: mouvement;
+	animation-duration: 3s;
+}
+@keyframes mouvement {
+	from {top: 20px;}
+	to {top: 0px;}
+}
+.titre-plat {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    width: 398px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+.titre-column {
+	display:flex;
+	flex-direction: column;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 15px 0 0 15px;    
+}
+.description-menu {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tarif {
+    width: 45px;
+    height: 75px;
+    font-weight: bold;
+    padding: 38px 15px 0 0;
+}
+.validation {
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	width: 0;
+	height: 75px;
+	color: white;
+	font-size: 24px;
+	border-radius: 0 20px 20px 0;
+	background-color: #99e2d0;
+    transition: width 3s;
+	opacity:0;
+}
+@keyframes rotation {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+  }
+.tourne {
+	animation-name: rotation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+.titre-plat:hover + .validation {
+	width: 100px;
+	opacity: 1;
 }
 .btn-commander {
     width: 200px;
@@ -285,32 +476,8 @@ ol {
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
-.cadre-menu {
-    width: 400px;
-    height: 75px;
-    position: relative;
-    background-color:#f2f2f2;
-    margin: 20px 0 0 10px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.cadre-menu:active {
-    animation-name: mouvement;
-	animation-duration: 2s;
-}
-.descriptions-menu {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 15px 0 0 20px;
-}
-.tarifs-menu {
-    float: right;
-    font-weight: bold;
-    padding-right: 15px;
-}
 /********  Pied de Page   ********/
-.pied-de-page {
+.block-pied-de-page {
     width: 100%;
     color: white;
     background-color: black;
@@ -318,33 +485,33 @@ ol {
     margin-top: 80px;
     padding: 25px;
 }
-.titre-footer {
+.titre-pied-de-page {
     font-family: 'Shrikhand', cursive;
     font-size: 150%;
     margin-bottom: 20px;
     padding: 0;
 }
-.liste-footer {
+.liste-pied-de-page {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
 }
-.lignes-footer {
+.lignes-pied-de-page {
     margin: 0 15px 10px 0;
 }
-.liens-footer{
+.icon-pied-de-page-utensils {
+    padding-right: 20px;
+}
+.icon-pied-de-page-handshake {
+    padding-right: 14px;
+}
+.liens-pied-de-page{
     text-decoration: none;
     color: white;
 }
-.icon-footer-utensils {
-    padding-right: 20px;
-}
-.icon-footer-handshake {
-    padding-right: 14px;
-}
-/******   Fin du css footer   ********/
+/******   Fin du css Pied de Page    ********/
 /************* Media Queries  *******/
 /*** polariod en mode pc ecrans > 992 px => hauteur = 500px   ****/
 .polaroid-restaurants {
@@ -353,6 +520,7 @@ ol {
     height: 300px;
     margin: 10px;
     border-radius: 15px;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /***** polaroid en mode tablette ecrans entre 768 et 992 px hauteur => 450px *****/
@@ -407,10 +575,5 @@ ol {
         justify-content: space-around;
         align-items: center;
     }
-}
-/*************   Keyframes  ********/
-@keyframes mouvement {
-	from {top: 20px;}
-	to {top: 0px;}
 }
 /*****   Fin du code CSS    ********/
