@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr-FR"> 
     <head>
-        <!-- 23-03-2022 -->
-        <!-- Openclassrooms Projet-03 OHMYFOOD Accueil -->
+        <!--                                           -->
+        <!--                                           -->
+        <!-- Formation OpenClassrooms                  -->
+        <!-- Developpeur WEB                           -->
+        <!-- Manuel MILLET                             -->
+        <!-- Projet 03 OHMYFOOD                        -->
+        <!--                                           -->
+        <!-- 25-03-2022                                -->
+        <!--                                           -->
 		<!-- Titre de la page -->
         <title>ohmyfood</title>
         <!-- Etiquettes meta -->
@@ -24,37 +31,37 @@
         <script src="https://kit.fontawesome.com/70a13da351.js" crossorigin="anonymous"></script>
     </head>
     <body onload="maFonction()">
-        <section id="chargement" class="centrer">
+        <div id="chargement" class="centrer">
             <div class="loader ch1 ch2"></div>
-            <span>Chargement, merci de patienter ...</span>
-        </section>
-        <main id="principale"><!-- section Principale -->
-        <header><!-- entête avec logo + choix du restaurant + slogan -->
-            <div class="flex-header">
-                <h1 id="logo" class="centrer">ohmyfood</h1>
-                <hr class="barre">
-                <div class="flex-ville">
-                    <form>
-                        <label><span><i class="fa fa-map-marker-alt fa-lg"></i></span></label>
-                        <input class="saisie-ville" type="text" placeholder="Paris, belleville">
-                    </form>
+            <span class="texte-chargement">Chargement...</span>
+        </div>
+        <!-- section Principale -->
+        <main id="principale">
+            <header><!-- entête avec logo + choix du restaurant + slogan -->
+                <div class="flex-header">
+                    <h1 id="logo" class="centrer">ohmyfood</h1>
+                    <hr class="barre">
+                    <div class="flex-ville">
+                        <form>
+                            <label><span><i class="fa fa-map-marker-alt fa-lg"></i></span></label>
+                            <input class="saisie-ville" type="text" placeholder="Paris, belleville">
+                        </form>
+                    </div>
+                    <div class="fond-gris-blanc">
+                        <div class="slogan centrer">
+                            <h2>Réservez le menu qui</h2>
+                            <h2>vous convient</h2>
+                        </div>
+                        <div class="centrer">
+                            <p class="decouvrez">Découvrez des restaurants d'exception, sélecionnés par nos soins.</p>
+                        </div>
+                        <div class="explorer">
+                            <button class="btn-explorer-restaurants">Explorer nos restaurants</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="fond-gris-blanc">
-                    <div class="slogan centrer">
-                        <h2>Réservez le menu qui</h2>
-                        <h2>vous convient</h2>
-                    </div>
-                    <div class="centrer">
-                        <p class="decouvrez">Découvrez des restaurants d'exception, sélecionnés par nos soins.</p>
-                    </div>
-                    <div class="explorer">
-                        <button class="btn-explorer-restaurants">Explorer nos restaurants</button>
-                    </div>
-                </div>
-            </div>
-            <div class="espace"></div>
-        </header>
-        <main>
+                <div class="espace"></div>
+            </header>
             <section id="fonctionnement">
                 <div class="positionnement-fonctionnement">
                     <div class="titre-fonctionnement">
@@ -88,28 +95,34 @@
                         <div class="polaroid-restaurants">
                             <a href="menu-palette-du-gout.html">
                                 <img class="photo-restaurants" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la-palette-du-gout">
+                                <div class="nouveau centrer">Nouveau</div>
                                 <div class="cadre-legend-restaurants">
-                                    <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                    <div class="remplir"></div>
-                                    <div class="coeur-n2 fond-blanc"></div>
-                                    <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                    <h2 class="legend-retaurant">La palette du goût</h2>
-                                    <p>Ménilmontant</p>
-                                    <div class="nouveau centrer">Nouveau</div>
+                                    <div>
+                                        <h2 class="legend-retaurant">La palette du goût</h2>
+                                        <p>Ménilmontant</p>
+                                    </div>
+                                    <div class="coeurs-accueil">
+                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n2 fond-blanc"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>
                         <div class="polaroid-restaurants">
                             <a href="menu-note-enchantee.html">
                                 <img class="photo-restaurants" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la-note-enchantée">
+                                <div class="nouveau centrer">Nouveau</div>
                                 <div class="cadre-legend-restaurants">
-                                    <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                    <div class="remplir"></div>
-                                    <div class="coeur-n2 fond-blanc"></div>
-                                    <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                    <h2 class="legend-retaurant">La note enchantée</h2>
-                                    <p>Charonne</p>
-                                    <div class="nouveau centrer">Nouveau</div>
+                                    <div>
+                                        <h2 class="legend-retaurant">La note enchantée</h2>
+                                        <p>Charonne</p>
+                                    </div>
+                                    <div class="coeurs-accueil">
+                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n2 fond-blanc"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -117,12 +130,15 @@
                             <a href="menu-a-la-francaise.html">
                                 <img class="photo-restaurants" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à-la-francaise">
                                 <div class="cadre-legend-restaurants">
-                                    <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                    <div class="remplir"></div>
-                                    <div class="coeur-n2 fond-blanc"></div>
-                                    <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                    <h2 class="legend-retaurant">À la française</h2>
-                                    <p>Cité Rouge</p>
+                                    <div>
+                                        <h2 class="legend-retaurant">À la française</h2>
+                                        <p>Cité Rouge</p>
+                                    </div>
+                                    <div class="coeurs-accueil">
+                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n2 fond-blanc"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -130,12 +146,15 @@
                             <a href="menu-delices-des-sens.html">
                                 <img class="photo-restaurants" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le-delice-des-sens">
                                 <div class="cadre-legend-restaurants">
-                                    <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                    <div class="remplir"></div>
-                                    <div class="coeur-n2 fond-blanc"></div>
-                                    <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                    <h2 class="legend-retaurant">Le délice des sens</h2>
-                                    <p>Folie Méricourt</p>
+                                    <div>
+                                        <h2 class="legend-retaurant">Le délice des sens</h2>
+                                        <p>Folie Méricourt</p>
+                                    </div>
+                                    <div class="coeurs-accueil">
+                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                        <div class="coeur-n2 fond-blanc"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -158,9 +177,8 @@
             var maVar;
                 console.log(maVar);
             function maFonction() {
-              maVar = setTimeout(showPage, 6000);
+              maVar = setTimeout(showPage, 4000);
             }
-            
             function showPage() {
               document.getElementById("chargement").style.display = "none";
               document.getElementById("principale").style.display = "block";

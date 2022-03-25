@@ -5,7 +5,7 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 23-03-2022                      */
+/* 25-03-2022                      */
 /***********************************/
 /*  elements de base */
 /****************************************************/
@@ -42,9 +42,21 @@ ol {
 	height: 100%;
 	line-height: 1000px;
 	color: black;
-	background-color: #f2f2f2;	
+	background-color: black;	
 	margin: 0;
 	padding: 0;
+    animation-name: couleurdefond;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes couleurdefond {
+    0% {background-color: #ff79da;}
+    33% {background-color: #9356dc;}
+    100% {background-color: #99e2d0;}
+}
+.texte {
+    display: inline;
 }
 .loader {
 	width: 50px;
@@ -72,8 +84,8 @@ ol {
 	animation-iteration-count: infinite;
 }
 @keyframes spin {
-	0%{transform: rotate(0deg); }
-	100%{ transform: rotate(360deg); };
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 .ch2::after {
 	content:'';
@@ -92,8 +104,8 @@ ol {
 	animation-iteration-count: infinite;
 }
 @keyframes spin-reverse {
-	0%{ transform: rotate(0deg); }
-	100%{ transform: rotate(-360deg); }
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(-360deg); }
 }
 /*** fin du loader spinner ****/
 /******** Section Principale "main"   *****/
@@ -166,13 +178,11 @@ ol {
     background-color: #9356dc;
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 35px;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
     margin: 20px 0 110px 0;
 }
 .btn-explorer-restaurants:hover {
-    -webkit-box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8); 
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
@@ -271,10 +281,10 @@ ol {
 .coeur-n1 {
 	width: 35px;
 	height: 35px;
-	position: absolute;
+	position: relative;
 	z-index: 1;
-	top: 237px;
-	left: 315px;
+	top: 0px;
+	left: -15px;
 	color:red;
 }
 .coeur-n2 {
@@ -282,8 +292,8 @@ ol {
 	height: 35px;
 	position: absolute;
 	z-index: 2;
-	top: 237px;
-	left: 315px;
+	top: 0px;
+	left: -15px;
 	transition: height 3.5s;
 }
 .coeur-n3 {
@@ -291,21 +301,12 @@ ol {
 	height: 35px;
 	position: absolute;
 	z-index: 3;
-	top: 237px;
-	left: 315px;
+	top: 0px;
+	left: -15px;
 	color:black;
 	background-color: transparent;
 }
-.remplir {
-	width: 35px;
-	height: 35px;
-	position: absolute;
-	z-index: 4;
-	top: 237px;
-	left: 315px;
-	background-color: transparent;
-}
-.remplir:hover + .coeur-n2 {
+.coeur-n3:hover + .coeur-n2 {
 	height: 0;
 }
 .fond-gris {
@@ -376,16 +377,23 @@ ol {
     border-radius: 15px 15px 0 0;
 }
 .cadre-legend-restaurants {
-    margin: 15px 0 0 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    margin: 10px 0 0 15px;
     padding: 0;
+}
+.coeurs-accueil {
+    position: relative;
 }
 .legend-retaurant {
     font-size: 100%;
 }
 .coeur-restaurant {
-    position: absolute;
-    top: 365px;
-    left: 1220px;
+    position: relative;
+    top: 0px;
+    left: 0px;
     background-color: #f2f2f2;
 }
 .cadre-menu {
@@ -448,7 +456,7 @@ ol {
 }
 @keyframes rotation {
     0%   {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
+    100% {transform: rotate(360deg);}
   }
 .tourne {
 	animation-name: rotation;
@@ -467,12 +475,10 @@ ol {
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 25px;
     border: none;
-    -webkit-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 50px 0 65px 0;
 }
 .btn-commander:hover {
-    -webkit-box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8); 
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
@@ -562,10 +568,6 @@ ol {
         width: 95%;
         height: 300px;
     }
-    .liste-footer {
-        display: flex;
-        flex-flow: column nowrap;
-    }
     .menu-fonctionnement {
         width: 380px;
     }
@@ -574,6 +576,10 @@ ol {
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items: center;
+    }
+    .liste-pied-de-page {
+        display: flex;
+        flex-flow: column nowrap;
     }
 }
 /*****   Fin du code CSS    ********/
