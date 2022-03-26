@@ -5,7 +5,7 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 25-03-2022                      */
+/* 26-03-2022                      */
 /***********************************/
 /*  elements de base */
 /****************************************************/
@@ -32,6 +32,9 @@ ol {
 }
 .centrer {
     text-align: center;
+}
+.texte-gras {
+    font-weight: bold;
 }
 /******** loader spinner  ****/
 #chargement {
@@ -114,14 +117,14 @@ ol {
 }
 /********  header   ******/
 .flex-header {
-    display:flex;
+    display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 .flex-menu-header {
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
@@ -129,7 +132,7 @@ ol {
 #logo {
     font-family: 'Shrikhand', cursive;
     font-size: 250%;
-    margin: 30px 0;
+    margin: 25px 0 7px 0;
     padding: 0;
 }
 .barre {
@@ -141,27 +144,31 @@ ol {
 .flex-ville {
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     width: 100%;
     background-color: #f2f2f2;
+    box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
+    -moz-box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
 }
 .saisie-ville {
     font-family: 'Roboto', sans-serif;
     font-size: 130%;
-    width: 150px;
+    width: 185px;
     text-align: left;
     border: none;
     background-color: #f2f2f2; 
-    margin: 10px 0 10px 10px;
+    margin: 20px 0 20px 25px;
 }
 .fond-gris-blanc {
     width: 100%;
     height: 390px;
-    background-color: white;
+    background-color: #f2f2f2;
 }
 .slogan {
-    font-weight: bold;
-    font-size: 150%;
-    margin: 70px 30px 30px 30px;
+    font-size: 130%;
+    margin: 60px 30px 15px 30px;
 }
 .decouvrez{
     font-size: 145%;
@@ -173,49 +180,48 @@ ol {
 .btn-explorer-restaurants {
     width: 320px;
     height: 70px;
-    font-size: 140%;
-    color:white;
     background-color: #9356dc;
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 35px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
-    margin: 20px 0 110px 0;
+    margin-top: 40px;
+}
+.texte-blanc {
+    font-size: 140%;
+    color:white;
 }
 .btn-explorer-restaurants:hover {
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
-.espace {
-    width: 100%;
-    height: 50px;
-}
 /**********  Section fonctionnement   **********/
 .positionnement-fonctionnement {
-    margin: 0;
+    margin-top: 0;
     padding: 0;
 }
 .titre-fonctionnement {
-    font-size: 150%;
-    margin-left: 60px;
+    font-size: 175%;
+    margin: 60px 0 30px 30px;
 }
-.liste-fonctionnement {
+.liste-fonctionnement { /* mode mobile */
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0 0 40px 55px;
+    margin: 0;
     padding: 0;
 }
-.menu-fonctionnement {
+.menu-fonctionnement { /* mode mobile */
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
     align-content: center;
+    align-items: center;
     position: relative;
-    width: 510px;
-    height: 80px;
+    width: 380px;
+    height: 100px;
     margin: 15px 0 15px 0;
-    padding-top: 25px;
     background-color: #f2f2f2;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -224,12 +230,12 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    right: 10px;
-    bottom: 3px;
-    width: 35px;
-    height: 35px;
-    font-size: 160%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    left: -20px;
+    font-size: 120%;
     color: white;
     background-color: #9356dc;
     padding: 3px;
@@ -245,15 +251,16 @@ ol {
 }
 .positionnement-restaurants {
     background-color: #f2f2f2;
+    margin-top: 90px;
 }
 .titre-restaurants {
-    font-size: 150%;
-    margin-left: 60px;
-    padding: 50px 0;
+    font-size: 175%;
+    margin-left: 25px;
+    padding: 75px 0 25px 0;
 }
-.flex-restaurant {
+.flex-restaurant { /* mode mobile */
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     margin: 0 15px;
 }
@@ -290,6 +297,7 @@ ol {
 .coeur-n2 {
 	width: 35px;
 	height: 35px;
+    color: transparent;
 	position: absolute;
 	z-index: 2;
 	top: 0px;
@@ -381,14 +389,18 @@ ol {
     flex-flow: row nowrap;
     justify-content: space-between;
     position: relative;
-    margin: 10px 0 0 15px;
+    margin: 15px 0 0 15px;
     padding: 0;
+}
+.legend-retaurant {
+    font-size: 140%;
+    margin-bottom: 5px;
+}
+.quartier-retaurant {
+    font-size: 135%;
 }
 .coeurs-accueil {
     position: relative;
-}
-.legend-retaurant {
-    font-size: 100%;
 }
 .coeur-restaurant {
     position: relative;
@@ -497,9 +509,9 @@ ol {
     margin-bottom: 20px;
     padding: 0;
 }
-.liste-pied-de-page {
+.liste-pied-de-page { /* mode mobile */
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
@@ -513,73 +525,82 @@ ol {
 .icon-pied-de-page-handshake {
     padding-right: 14px;
 }
-.liens-pied-de-page{
+.liens-pied-de-page {
+    font-size: 135%;
     text-decoration: none;
     color: white;
 }
 /******   Fin du css Pied de Page    ********/
 /************* Media Queries  *******/
-/*** polariod en mode pc ecrans > 992 px => hauteur = 500px   ****/
-.polaroid-restaurants {
+/*** polariod en mode mobile écrans < 768px => hauteur = 325px   ****/
+.polaroid-restaurants { /* mode mobile */
     position: relative;
-    width: 20%;
-    height: 300px;
+    width: 95%;
+    height: 325px;
     margin: 10px;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/***** polaroid en mode tablette ecrans entre 768 et 992 px hauteur => 450px *****/
-@media screen and (max-width: 992px ) {
-    .flex-restaurant {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+/***** polaroid mode tablette ecrans entre 768 et 992 px hauteur => 450px *****/
+@media screen and (min-width: 768px ) {
+    .liste-fonctionnement {
+        flex-flow: row nowrap;
     }
     .menu-fonctionnement {
-        width: 250px;
+        width: 200px;
+        height: 60px;
     }
-    .liste-fonctionnement {
-        margin-left: 0 ;
-    }
-    .text-fonctionnement {
-        font-size: 95%;
-        margin: 10px 0 0 8px;
+    .flex-restaurant {
+        flex-flow: row wrap;
     }
     .polaroid-restaurants {
         width: 45%;
-        height: 180px;
+        height: 250px;
+    }
+    .text-fonctionnement {
+        font-size: 80%;
+        margin: 10px 0 0 8px;
+    }
+    .macaron {
+        top: 10px;
     }
     .cadre-legend-restaurants {
         margin: 6px 0 0 15px;
     }
-}
-/***** polaroid en mode mobile ecrans entre  < 768^px et 992 px hauteur => 300px *****/
-@media screen and (max-width: 768px ) {
-    .fond-gris-blanc {
-        background-color: #f2f2f2;
+    .legend-retaurant {
+        font-size: 100%;
     }
-    .flex-restaurant {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
-    }
-    .polaroid-restaurants {
-        width: 95%;
-        height: 300px;
-    }
-    .menu-fonctionnement {
-        width: 380px;
-    }
-    .liste-fonctionnement {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        align-items: center;
+    .quartier-retaurant {
+        font-size: 100%;
     }
     .liste-pied-de-page {
-        display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
+    }
+}
+/***** polaroid mode pc ecrans > 992 px => hauteur = 500px *****/
+@media screen and (min-width: 992px ) {
+    .liste-fonctionnement {
+        flex-flow: row nowrap;
+    }
+    .menu-fonctionnement {
+        width: 280px;
+    }
+    .flex-restaurant {
+        flex-flow: row wrap;
+    }
+    .polaroid-restaurants {
+        width: 20%;
+        height: 350px;
+    }
+    .legend-retaurant {
+        font-size: 100%;
+    }
+    .quartier-retaurant {
+        font-size: 100%;
+    }
+    .liste-pied-de-page {
+        flex-flow: row nowrap;
     }
 }
 /*****   Fin du code CSS    ********/
