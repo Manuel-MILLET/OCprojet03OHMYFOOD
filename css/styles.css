@@ -5,18 +5,15 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 26-03-2022                      */
+/* 28-03-2022                      */
 /***********************************/
 /*  elements de base */
-/****************************************************/
-/*   box-sizing est appliqué à tous les éléments    */
-/****************************************************/
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;/*   box-sizing est appliqué à tous les éléments    */
 }
 /* Google font "Roboto" pour toute la page body et titres + paragraphes*/
-body, h1, h2, h3, h4, h5, h6, p ,hr {
-    font-family: 'Roboto', sans-serif;
+body, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Roboto', 'Arial', 'sans-serif';
     margin: 0;
     padding: 0;
 }
@@ -36,28 +33,45 @@ ol {
 .texte-gras {
     font-weight: bold;
 }
-/******** loader spinner  ****/
+.texte-gras400 {
+    font-weight: 400;
+}
+.texte-gras900 {
+    font-weight: 900;
+}
+/******** page attente de fin de chargement  ****/
+#page-blanche {
+    position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white; 
+}
 #chargement {
 	display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 15;
 	font-family: sans-serif;
 	font-size: 40px;
     width: 100%;
-	height: 100%;
 	line-height: 1000px;
 	color: black;
-	background-color: black;	
+	background-color: #f2f2f2;	
 	margin: 0;
 	padding: 0;
-    animation-name: couleurdefond;
-    animation-duration: 5s;
+    animation-name: cache;
+	animation-delay: 1s;
+	animation-duration: 1s;
     animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-@keyframes couleurdefond {
-    0% {background-color: #ff79da;}
-    33% {background-color: #9356dc;}
-    100% {background-color: #99e2d0;}
-}
+@keyframes cache {
+    from {z-index: -1;}
+    to {z-index: -1;}
+  }
 .texte {
     display: inline;
 }
@@ -81,12 +95,12 @@ ol {
 	border-top-color: #ff79da;
 	border-right-color: #ff79da;
 	border-radius: 50px;
-	animation-name: spin;
+	animation-name: tourne;
 	animation-duration: 3s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-@keyframes spin {
+@keyframes tourne {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
@@ -101,19 +115,24 @@ ol {
 	border-bottom-color: #99e2d0;
 	border-left-color: #99e2d0;
 	border-radius: 50px;
-	animation-name: spin-reverse;
+	animation-name: tourne-inverse;
 	animation-duration: 3s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-@keyframes spin-reverse {
+@keyframes tourne-inverse {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(-360deg); }
 }
-/*** fin du loader spinner ****/
+/*** fin de la ge attente fin de chargement ****/
 /******** Section Principale "main"   *****/
 #principale {
-    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: white;
 }
 /********  header   ******/
 .flex-header {
@@ -153,8 +172,8 @@ ol {
     -moz-box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
 }
 .saisie-ville {
-    font-family: 'Roboto', sans-serif;
     font-size: 130%;
+    font-family: 'Roboto', 'Arial', 'sans-serif';
     width: 185px;
     text-align: left;
     border: none;
@@ -187,13 +206,13 @@ ol {
     border: none;
     margin-top: 40px;
 }
-.texte-blanc {
-    font-size: 140%;
-    color:white;
-}
 .btn-explorer-restaurants:hover {
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
+}
+.texte-blanc {
+    font-size: 140%;
+    color:white;
 }
 /**********  Section fonctionnement   **********/
 .positionnement-fonctionnement {
@@ -290,7 +309,7 @@ ol {
 	height: 35px;
 	position: relative;
 	z-index: 1;
-	top: 0px;
+	top: 8px;
 	left: -15px;
 	color:red;
 }
@@ -300,7 +319,7 @@ ol {
     color: transparent;
 	position: absolute;
 	z-index: 2;
-	top: 0px;
+	top: 8px;
 	left: -15px;
 	transition: height 3.5s;
 }
@@ -309,7 +328,7 @@ ol {
 	height: 35px;
 	position: absolute;
 	z-index: 3;
-	top: 0px;
+	top: 8px;
 	left: -15px;
 	color:black;
 	background-color: transparent;
@@ -530,7 +549,7 @@ ol {
     text-decoration: none;
     color: white;
 }
-/******   Fin du css Pied de Page    ********/
+/******   Fin du Pied de Page    ********/
 /************* Media Queries  *******/
 /*** polariod en mode mobile écrans < 768px => hauteur = 325px   ****/
 .polaroid-restaurants { /* mode mobile */

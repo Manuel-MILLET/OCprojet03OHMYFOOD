@@ -8,7 +8,7 @@
         <!-- Manuel MILLET                             -->
         <!-- Projet 03 OHMYFOOD                        -->
         <!--                                           -->
-        <!-- 26-03-2022                                -->
+        <!-- 28-03-2022                                -->
         <!--                                           -->
 		<!-- Titre de la page -->
         <title>ohmyfood</title>
@@ -30,166 +30,156 @@
         <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="https://kit.fontawesome.com/70a13da351.js" crossorigin="anonymous"></script>
     </head>
-    <body onload="maFonction()">
-        <div id="chargement" class="centrer">
-            <div class="loader ch1 ch2"></div>
-            <span class="texte-chargement">Chargement...</span>
-        </div>
-        <div id="principale">
-        <header><!-- entête avec logo + choix du restaurant + slogan -->
-            <div class="flex-header">
-                <h1 id="logo" class="centrer">ohmyfood</h1>
-                <div class="flex-ville">
-                    <form>
-                        <label><span><i class="fa fa-map-marker-alt fa-xl"></i></span></label>
-                        <input class="saisie-ville texte-gras" type="text" placeholder="Paris, Belleville">
-                    </form>
-                </div>
-                <div class="fond-gris-blanc">
-                    <div class="slogan texte-gras  centrer">
-                        <h2>Réservez le menu qui</h2>
-                        <h2>vous convient</h2>
-                    </div>
-                    <div class="centrer">
-                        <p class="decouvrez">Découvrez des restaurants d'exception, sélecionnés par nos soins.</p>
-                    </div>
-                    <div class="explorer">
-                        <button class="btn-explorer-restaurants"><a href="#"><span class="texte-blanc">Explorer nos restaurants</span></a></button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- section Principale -->
-        <main>
-            <section id="fonctionnement">
-                <div class="positionnement-fonctionnement">
-                    <div class="titre-fonctionnement texte-gras">
-                        <h3>Fonctionnement</h3>
-                    </div>
-                    <ol class="liste-fonctionnement">
-                        <li>
-                            <a href="#">
-                                <div class="menu-fonctionnement centrer">
-                                    <div class="macaron">1</div><span class="icon"><i class="fa fa-mobile fa-xl"></i></span><span class="text-fonctionnement">Choisissez un restaurant</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="menu-fonctionnement centrer">
-                                    <span class="macaron">2</span><span class="icon"><i class="fa fa-list fa-xl"></i></span><span class="text-fonctionnement">Composez votre menu</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="menu-fonctionnement centrer">
-                                    <span class="macaron">3</span><span class="icon"><i class="fa fa-store fa-xl"></i></span><span class="text-fonctionnement">Dégustez au restaurant</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ol>
-                </div>
-            </section>
-            <section id="restaurants">
-                <div class="positionnement-restaurants">
-                    <div class="titre-restaurants texte-gras">
-                        <h3>Restaurants</h3>
-                    </div>
-                    <div class="flex-restaurant">
-                        <div class="polaroid-restaurants">
-                            <a href="pages-restaurants/menu-palette-du-gout.html">
-                                <img class="photo-restaurants" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la-palette-du-gout">
-                                <div class="nouveau centrer">Nouveau</div>
-                                <div class="cadre-legend-restaurants">
-                                    <div>
-                                        <h2 class="legend-retaurant texte-gras">La palette du goût</h2>
-                                        <p class="quartier-retaurant">Ménilmontant</p>
-                                    </div>
-                                    <div class="coeurs-accueil">
-                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
-                                    </div>
-                                </div>
-                            </a>
+    <body>
+        <div id="page-blanche"><!-- fond d'écran blanc pour cacher la page de chargement -->
+            <div id="chargement" class="centrer"><!-- page de message en attente de fin de chargement   -->
+                <div class="loader ch1 ch2"></div>
+                <span class="texte-chargement">Chargement...</span>
+            </div><!-- fin de la page de message en attente de fin de chargement   -->
+            <div id="principale"><!-- Début de la page Principale de OMYFOOD   -->
+                <header><!-- entête avec logo + choix du restaurant + slogan -->
+                    <div class="flex-header">
+                        <h1 id="logo" class="texte-gras400 centrer">ohmyfood</h1>
+                        <div class="flex-ville">
+                            <form>
+                                <label><span><i class="fa fa-map-marker-alt fa-xl"></i></span></label>
+                                <input class="saisie-ville texte-gras" type="text" placeholder="Paris, Belleville">
+                            </form>
                         </div>
-                        <div class="polaroid-restaurants">
-                            <a href="pages-restaurants/menu-note-enchantee.html">
-                                <img class="photo-restaurants" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la-note-enchantée">
-                                <div class="nouveau centrer">Nouveau</div>
-                                <div class="cadre-legend-restaurants">
-                                    <div>
-                                        <h2 class="legend-retaurant texte-gras">La note enchantée</h2>
-                                        <p class="quartier-retaurant">Charonne</p>
-                                    </div>
-                                    <div class="coeurs-accueil">
-                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="polaroid-restaurants">
-                            <a href="pages-restaurants/menu-a-la-francaise.html">
-                                <img class="photo-restaurants" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à-la-francaise">
-                                <div class="cadre-legend-restaurants">
-                                    <div>
-                                        <h2 class="legend-retaurant texte-gras">À la française</h2>
-                                        <p class="quartier-retaurant">Cité Rouge</p>
-                                    </div>
-                                    <div class="coeurs-accueil">
-                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="polaroid-restaurants">
-                            <a href="pages-restaurants/menu-delices-des-sens.html">
-                                <img class="photo-restaurants" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le-delice-des-sens">
-                                <div class="cadre-legend-restaurants">
-                                    <div>
-                                        <h2 class="legend-retaurant texte-gras">Le délice des sens</h2>
-                                        <p class="quartier-retaurant">Folie Méricourt</p>
-                                    </div>
-                                    <div class="coeurs-accueil">
-                                        <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
-                                        <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="fond-gris-blanc">
+                            <div class="slogan texte-gras900  centrer">
+                                <h2>Réservez le menu qui</h2>
+                                <h2>vous convient</h2>
+                            </div>
+                            <div>
+                                <p class="decouvrez centrer">Découvrez des restaurants d'exception, sélecionnés par nos soins.</p>
+                            </div>
+                            <div class="explorer">
+                                <button class="btn-explorer-restaurants"><a href="#"><span class="texte-blanc">Explorer nos restaurants</span></a></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main><!-- Fin de la section principale -->
-        <footer><!-- Section pied-de-page -->
-            <div class="block-pied-de-page">
-                <h3 class="titre-pied-de-page">ohmyfood</h3>
-                <ol class="liste-pied-de-page">
-                    <li class="lignes-pied-de-page"><span class="icon-pied-de-page-utensils"><i class="fa fa-utensils"></i></span><a class="liens-pied-de-page" href="#">Proposer un restaurant</a></li>
-                    <li class="lignes-pied-de-page"><span class="icon-pied-de-page-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-pied-de-page" href="#">Devenir partenaire</a></li>
-                    <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Mentions légales</a></li>
-                    <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Contact</a></li>
-                </ol>
-            </div>
-        </footer><!-- Fin de la section pied-de-page -->
-        </div><!-- Fin de la page principale -->
-        <script>
-            var maVar;
-                console.log(maVar);
-            function maFonction() {
-              maVar = setTimeout(showPage, 1000);
-            }
-            function showPage() {
-              document.getElementById("chargement").style.display = "none";
-              document.getElementById("principale").style.display = "block";
-            }
-        </script>
+                </header>
+                <main><!-- section Principale de OMYFOOD -->
+                    <section id="fonctionnement">
+                        <div class="positionnement-fonctionnement">
+                            <div class="titre-fonctionnement texte-gras900">
+                                <h3>Fonctionnement</h3>
+                            </div>
+                            <ol class="liste-fonctionnement">
+                                <li>
+                                    <a href="#">
+                                        <div class="menu-fonctionnement centrer">
+                                            <div class="macaron">1</div><span class="icon"><i class="fa fa-mobile fa-xl"></i></span><span class="text-fonctionnement">Choisissez un restaurant</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="menu-fonctionnement centrer">
+                                            <span class="macaron">2</span><span class="icon"><i class="fa fa-list fa-xl"></i></span><span class="text-fonctionnement">Composez votre menu</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="menu-fonctionnement centrer">
+                                            <span class="macaron">3</span><span class="icon"><i class="fa fa-store fa-xl"></i></span><span class="text-fonctionnement">Dégustez au restaurant</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section id="restaurants">
+                        <div class="positionnement-restaurants">
+                            <div class="titre-restaurants texte-gras900">
+                                <h3>Restaurants</h3>
+                            </div>
+                            <div class="flex-restaurant">
+                                <div class="polaroid-restaurants">
+                                    <a href="pages-restaurants/menu-palette-du-gout.html">
+                                        <img class="photo-restaurants" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la-palette-du-gout">
+                                        <div class="nouveau centrer">Nouveau</div>
+                                        <div class="cadre-legend-restaurants">
+                                            <div>
+                                                <h2 class="legend-retaurant texte-gras900">La palette du goût</h2>
+                                                <p class="quartier-retaurant">Ménilmontant</p>
+                                            </div>
+                                            <div class="coeurs-accueil">
+                                                <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="polaroid-restaurants">
+                                    <a href="pages-restaurants/menu-note-enchantee.html">
+                                        <img class="photo-restaurants" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la-note-enchantée">
+                                        <div class="nouveau centrer">Nouveau</div>
+                                        <div class="cadre-legend-restaurants">
+                                            <div>
+                                                <h2 class="legend-retaurant texte-gras900">La note enchantée</h2>
+                                                <p class="quartier-retaurant">Charonne</p>
+                                            </div>
+                                            <div class="coeurs-accueil">
+                                                <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="polaroid-restaurants">
+                                    <a href="pages-restaurants/menu-a-la-francaise.html">
+                                        <img class="photo-restaurants" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à-la-francaise">
+                                        <div class="cadre-legend-restaurants">
+                                            <div>
+                                                <h2 class="legend-retaurant texte-gras900">À la française</h2>
+                                                <p class="quartier-retaurant">Cité Rouge</p>
+                                            </div>
+                                            <div class="coeurs-accueil">
+                                                <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="polaroid-restaurants">
+                                    <a href="pages-restaurants/menu-delices-des-sens.html">
+                                        <img class="photo-restaurants" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le-delice-des-sens">
+                                        <div class="cadre-legend-restaurants">
+                                            <div>
+                                                <h2 class="legend-retaurant texte-gras900">Le délice des sens</h2>
+                                                <p class="quartier-retaurant">Folie Méricourt</p>
+                                            </div>
+                                            <div class="coeurs-accueil">
+                                                <div class="coeur-n1 fond-blanc"><span><i class="fas fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n3"><span><i class="far fa-heart fa-2x"></i></span></div>
+                                                <div class="coeur-n2 fond-blanc">Pour cacher le coeur rouge</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main><!-- Fin de la section principale -->
+                <footer><!-- Section pied-de-page -->
+                    <div class="block-pied-de-page">
+                        <h3 class="titre-pied-de-page texte-gras400">ohmyfood</h3>
+                        <ol class="liste-pied-de-page">
+                            <li class="lignes-pied-de-page"><span class="icon-pied-de-page-utensils"><i class="fa fa-utensils"></i></span><a class="liens-pied-de-page" href="#">Proposer un restaurant</a></li>
+                            <li class="lignes-pied-de-page"><span class="icon-pied-de-page-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-pied-de-page" href="#">Devenir partenaire</a></li>
+                            <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Mentions légales</a></li>
+                            <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Contact</a></li>
+                        </ol>
+                    </div>
+                </footer><!-- Fin de la section pied-de-page -->
+            </div><!-- Fin de la page principale -->
+        <div class="page-blanche"><!-- fin du fond d'écran blanc pour cacher la page de chargement -->
     </body>
 </html>
 <!-- Fin de la page HTML -->
