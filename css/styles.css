@@ -24,7 +24,7 @@ a {
 img {
     width: 100%;
 }
-ol {
+ol, ul {
     list-style-type: none;
 }
 .centrer {
@@ -181,6 +181,12 @@ ol {
     margin: 20px 0 20px 25px;
 }
 .fond-gris-blanc {
+    display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 390px;
     background-color: #f2f2f2;
@@ -190,28 +196,28 @@ ol {
     margin: 60px 30px 15px 30px;
 }
 .decouvrez{
-    font-size: 145%;
+    font-size: 115%;
+    font-weight: normal;
+    margin-top: 20px;
 }
-.explorer {
-    display: flex;
-    justify-content: center;
-}
-.btn-explorer-restaurants {
-    width: 320px;
+.explorer-restaurants {
+    display: inline-block;
     height: 70px;
+    cursor: pointer;
     background-color: #9356dc;
     background-image: linear-gradient(#ff79da,#9356dc);
     border-radius: 35px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
-    margin-top: 40px;
+    padding: 20px 30px;
+    margin: 30px 0 70px 0;
 }
-.btn-explorer-restaurants:hover {
+.explorer-restaurants:hover {
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
 .texte-blanc {
-    font-size: 140%;
+    font-size: 135%;
     color:white;
 }
 /**********  Section fonctionnement   **********/
@@ -498,18 +504,21 @@ ol {
 	width: 100px;
 	opacity: 1;
 }
-.btn-commander {
-    width: 200px;
-    height: 45px;
+.commander {
+    display: inline-block;
+    height: 70px;
+    cursor: pointer;
     color:white;
+    font-size: 140%;
     background-color: #9356dc;
     background-image: linear-gradient(#ff79da,#9356dc);
-    border-radius: 25px;
+    border-radius: 35px;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 50px 0 65px 0;
+    margin: 60px 0 120px 0;
+    padding: 25px 85px;
 }
-.btn-commander:hover {
+.commander:hover {
     box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.8);
     opacity: 70%;
 }
@@ -519,7 +528,7 @@ ol {
     color: white;
     background-color: black;
     text-align: left;
-    margin-top: 80px;
+    margin: 0;
     padding: 25px;
 }
 .titre-pied-de-page {
