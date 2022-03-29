@@ -5,7 +5,7 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 28-03-2022                      */
+/* 29-03-2022                      */
 /***********************************/
 /*  elements de base */
 * {
@@ -148,17 +148,25 @@ ol, ul {
     align-items: center;
 }
 /******* logo OHMYFOOD  *******/
-#logo {
+.logo-texte {
     font-family: 'Shrikhand', cursive;
     font-size: 250%;
     margin: 25px 0 7px 0;
     padding: 0;
 }
-.barre {
-    width: 100%;
-    height: 13px;
-    background-image: linear-gradient(#d2d2d2, #f2f2f2);
-    border-top: 1px solid white;
+.logo-svg {
+    display: block;
+    margin: 25px 0 0 175px;
+}
+.centre-logo-restaurant {
+    display: block;
+    margin: 25px auto 0 auto;
+}
+.dimention55 {
+    width: 55%;
+}
+.dimention30 {
+    width: 30%;
 }
 .flex-ville {
     display: flex;
@@ -166,6 +174,7 @@ ol, ul {
     align-items: center;
     align-content: center;
     width: 100%;
+    margin-top: 25px;
     background-color: #f2f2f2;
     box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
     -webkit-box-shadow: 0 5px 20px -15px rgba(0,0,0,1) inset;
@@ -244,7 +253,7 @@ ol, ul {
     align-content: center;
     align-items: center;
     position: relative;
-    width: 380px;
+    width: 415px;
     height: 100px;
     margin: 15px 0 15px 0;
     background-color: #f2f2f2;
@@ -256,8 +265,8 @@ ol, ul {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     top: 30px;
     left: -20px;
     font-size: 120%;
@@ -272,7 +281,7 @@ ol, ul {
 .text-fonctionnement {
     font-size: 130%;
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 40px;
 }
 .positionnement-restaurants {
     background-color: #f2f2f2;
@@ -350,13 +359,23 @@ ol, ul {
 }
 /********* fin du remplissage des coeurs
 /******** pages details des restaurants  *********/
-.icon-retour-acceuil {
-    float: left;
-    margin: 20px 0 0 30px;
+.icone-retour-accueil {
+    width: 60px;
+    height: 60px;
+    padding: 30px 0 0 25px;
+}
+.en-tete-logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.texte-trs {
+    color: transparent;
 }
 .cadre-photo-restaurants {
     width: 100%;
     height: 450px;
+    margin-top: 25px;
 }
 .photo-header {
     position: absolute;
@@ -576,7 +595,7 @@ ol, ul {
         flex-flow: row nowrap;
     }
     .menu-fonctionnement {
-        width: 200px;
+        width: 215px;
         height: 60px;
     }
     .flex-restaurant {
@@ -591,6 +610,8 @@ ol, ul {
         margin: 10px 0 0 8px;
     }
     .macaron {
+        width: 40px;
+        height: 40px;
         top: 10px;
     }
     .cadre-legend-restaurants {
@@ -604,6 +625,10 @@ ol, ul {
     }
     .liste-pied-de-page {
         flex-flow: row nowrap;
+    }
+    .text-fonctionnement {
+        font-size: 80%;
+        margin-left: 15px;
     }
 }
 /***** polaroid mode pc ecrans > 992 px => hauteur = 500px *****/
@@ -629,6 +654,10 @@ ol, ul {
     }
     .liste-pied-de-page {
         flex-flow: row nowrap;
+    }
+    .text-fonctionnement {
+        font-size: 90%;
+        margin-left: 30px;
     }
 }
 /*****   Fin du code CSS    ********/

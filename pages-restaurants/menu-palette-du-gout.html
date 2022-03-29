@@ -8,7 +8,7 @@
         <!-- Manuel MILLET                             -->
         <!-- Projet 03 OHMYFOOD                        -->
         <!--                                           -->
-        <!-- 25-03-2022                                -->
+        <!-- 29-03-2022                                -->
         <!--                                           -->
         <!-- Titre de la page-->
         <title>La palette du goût</title>
@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Liens -->
         <!-- Fichier CSS -->
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/style.css">
         <!-- CDN police Google Shrikhand pour les titres et le logo    -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,18 @@
         <script src="https://kit.fontawesome.com/70a13da351.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header><!-- entête avec logo + choix du restaurant -->
-            <a href="../index.html"><span class="icon-retour-acceuil"><i class="fa fa-arrow-left fa-xl"></i></span></a>
-            <h1 id="logo" class="centrer decale-gauche">ohmyfood</h1>
+        <header><!-- entête avec logo + image du restaurant -->
+            <div class="en-tete-logo">
+                <div class="icone-retour-accueil">
+                    <a href="../index.html"><span><i class="fa fa-arrow-left fa-xl"></i></span></a>
+                </div>
+                <div>
+                    <img class="centre-logo-restaurant dimention55" src="../assets/images/logo/ohmyfood.png" alt="logo OHMYFOOD">
+                </div>
+                <div class="icone-retour-accueil texte-trs">
+                    Centrage logo
+                </div>
+            </div>
             <div class="cadre-photo-restaurants">
                 <img class="photo-header" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La-palette-du-goût">
             </div>
@@ -182,12 +191,12 @@
         <footer><!-- Section pied-de-page -->
             <div class="block-pied-de-page">
                 <h3 class="titre-pied-de-page texte-gras400">ohmyfood</h3>
-                <ol class="liste-pied-de-page">
+                <ul class="liste-pied-de-page">
                     <li class="lignes-pied-de-page"><span class="icon-pied-de-page-utensils"><i class="fa fa-utensils"></i></span><a class="liens-pied-de-page" href="#">Proposer un restaurant</a></li>
                     <li class="lignes-pied-de-page"><span class="icon-pied-de-page-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-pied-de-page" href="#">Devenir partenaire</a></li>
                     <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Mentions légales</a></li>
-                    <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Contact</a></li>
-                </ol>
+                    <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="mailto:m.bluth@example.com">Contact</a></li>
+                </ul>
             </div>
         </footer><!-- Fin de la section pied-de-page -->
     </body>

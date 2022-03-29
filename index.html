@@ -8,7 +8,7 @@
         <!-- Manuel MILLET                             -->
         <!-- Projet 03 OHMYFOOD                        -->
         <!--                                           -->
-        <!-- 28-03-2022                                -->
+        <!-- 29-03-2022                                -->
         <!--                                           -->
 		<!-- Titre de la page -->
         <title>ohmyfood</title>
@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Liens -->
         <!-- Fichier CSS -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- CDN police Google Shrikhand pour les titres et le logo    -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- CDN fontawesome 5.13.0 liens pour les icons font awesome  -->
         <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <!-- scripts pour CDN font-awesome  5.13.0  -->
         <script src="https://kit.fontawesome.com/70a13da351.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -39,7 +40,9 @@
             <div id="principale"><!-- Début de la page Principale de OMYFOOD   -->
                 <header><!-- entête avec logo + choix du restaurant + slogan -->
                     <div class="flex-header">
-                        <h1 id="logo" class="texte-gras400 centrer">ohmyfood</h1>
+                        <div class="logo-svg">
+                            <img class="dimention55" src="assets/images/logo/ohmyfood.png" alt="logo OHMYFOOD">
+                        </div>
                         <div class="flex-ville">
                             <form>
                                 <label><span><i class="fa fa-map-marker-alt fa-xl"></i></span></label>
@@ -48,8 +51,7 @@
                         </div>
                         <div class="fond-gris-blanc">
                             <div class="slogan texte-gras900  centrer">
-                                <h2>Réservez le menu qui</h2>
-                                <h2>vous convient</h2>
+                                <h2>Réservez le menu qui<br>vous convient</h2>
                                 <p class="decouvrez centrer">Découvrez des restaurants d'exception, sélecionnés par nos soins.</p>
                             </div>
                             <div class="explorer-restaurants ">
@@ -168,12 +170,12 @@
                 <footer><!-- Section pied-de-page -->
                     <div class="block-pied-de-page">
                         <h3 class="titre-pied-de-page texte-gras400">ohmyfood</h3>
-                        <ol class="liste-pied-de-page">
+                        <ul class="liste-pied-de-page">
                             <li class="lignes-pied-de-page"><span class="icon-pied-de-page-utensils"><i class="fa fa-utensils"></i></span><a class="liens-pied-de-page" href="#">Proposer un restaurant</a></li>
                             <li class="lignes-pied-de-page"><span class="icon-pied-de-page-handshake"><i class="fa fa-handshake-angle"></i></span><a class="liens-pied-de-page" href="#">Devenir partenaire</a></li>
                             <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Mentions légales</a></li>
-                            <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="#">Contact</a></li>
-                        </ol>
+                            <li class="lignes-pied-de-page"><a class="liens-pied-de-page" href="mailto:m.bluth@example.com">Contact</a></li>
+                        </ul>
                     </div>
                 </footer><!-- Fin de la section pied-de-page -->
             </div><!-- Fin de la page principale -->
