@@ -1,0 +1,797 @@
+@charset "UTF-8";
+/***** importation des fichiers reset   ****/
+@import "css/reset-eric-meyer.css";
+@import "css/normalize-v8-0-1.css";
+/***** définition des couleurs de la chart graphique  ***/
+/**** couleur fond gris clair  ****/
+/***********************************/
+/*                                 */
+/*  Formation OpenClassrooms       */
+/*  Developpeur WEB                */
+/*  Manuel MILLET                  */
+/*  Projet 03 OHMYFOOD             */
+/*                                 */
+/* 31-03-2022    15h40             */
+/***********************************/
+/*  elements de base */
+* {
+  box-sizing: border-box;
+  /*   box-sizing est appliqué à tous les éléments    */
+}
+
+/* Google font "Roboto" pour toute la page body et titres + paragraphes*/
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: "Roboto", "Arial", "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+.centrer {
+  text-align: center;
+}
+
+.texte-gras {
+  font-weight: bold;
+}
+
+.texte-gras400 {
+  font-weight: 400;
+}
+
+.texte-gras900 {
+  font-weight: 900;
+}
+
+/******** page attente de fin de chargement  ****/
+#page-blanche {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
+#chargement {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  font-family: "sans-serif";
+  font-size: 40px;
+  width: 100%;
+  line-height: 1000px;
+  color: black;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  animation-name: cache;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cache {
+  from {
+    z-index: -1;
+  }
+  to {
+    z-index: -1;
+  }
+}
+.texte {
+  display: inline;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border: 12px solid #9356dc;
+  border-radius: 50px;
+}
+
+.ch1::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border: 12px solid transparent;
+  border-radius: 50px;
+  border-top-color: #ff79da;
+  border-right-color: #ff79da;
+  animation-name: tourne;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tourne {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ch2::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  border: 12px solid transparent;
+  border-radius: 50px;
+  border-bottom-color: #99e2d0;
+  border-left-color: #99e2d0;
+  animation-name: tourne-inverse;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tourne-inverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/*** fin de la ge attente fin de chargement ****/
+/******** Section Principale "main"   *****/
+#principale {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  background-color: white;
+}
+
+/********  header   ******/
+.flex-header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-menu-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/******* logo OHMYFOOD  *******/
+.logo-texte {
+  font-family: "Shrikhand", "cursive";
+  font-size: 250%;
+  margin: 25px 0 7px 0;
+  padding: 0;
+}
+
+.logo-svg {
+  display: block;
+  margin: 25px 0 0 175px;
+}
+
+.centre-logo-restaurant {
+  display: block;
+  margin: 25px auto 0 auto;
+}
+
+.dimention55 {
+  width: 55%;
+}
+
+.dimention30 {
+  width: 30%;
+}
+
+.flex-ville {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 25px;
+  background-color: #f2f2f2;
+  box-shadow: 0 5px 20px -15px black inset;
+  -webkit-box-shadow: 0 5px 20px -15px black inset;
+  -moz-box-shadow: 0 5px 20px -15px black inset;
+}
+
+.saisie-ville {
+  font-size: 130%;
+  font-family: "Roboto", "Arial", "sans-serif";
+  width: 185px;
+  text-align: left;
+  border: none;
+  background-color: #f2f2f2;
+  margin: 20px 0 20px 25px;
+}
+
+.fond-gris-blanc {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 390px;
+  background-color: #f2f2f2;
+}
+
+.slogan {
+  font-size: 130%;
+  margin: 60px 30px 15px 30px;
+}
+
+.decouvrez {
+  font-size: 115%;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.explorer-restaurants {
+  display: inline-block;
+  height: 70px;
+  cursor: pointer;
+  background-color: #9356dc;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border-radius: 35px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  padding: 20px 30px;
+  margin: 30px 0 70px 0;
+}
+
+.explorer-restaurants:hover {
+  box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.8);
+  opacity: 70%;
+}
+
+.texte-blanc {
+  font-size: 135%;
+  color: white;
+}
+
+/**********  Section fonctionnement   **********/
+.positionnement-fonctionnement {
+  margin-top: 0;
+  padding: 0;
+}
+
+.titre-fonctionnement {
+  font-size: 175%;
+  margin: 60px 0 30px 30px;
+}
+
+.liste-fonctionnement {
+  /* mode mobile */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-fonctionnement {
+  /* mode mobile */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  width: 415px;
+  height: 100px;
+  margin: 15px 0 15px 0;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.macaron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 30px;
+  left: -20px;
+  font-size: 120%;
+  color: white;
+  background-color: #9356dc;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.icon {
+  padding-top: 4px;
+}
+
+.text-fonctionnement {
+  font-size: 130%;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.positionnement-restaurants {
+  background-color: #f2f2f2;
+  margin-top: 90px;
+}
+
+.titre-restaurants {
+  font-size: 175%;
+  margin-left: 25px;
+  padding: 75px 0 25px 0;
+}
+
+.flex-restaurant {
+  /* mode mobile */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  margin: 0 15px;
+}
+
+.cadre-titres-restaurants {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 50px;
+  padding: 30px;
+  background-color: #f2f2f2;
+  z-index: 2;
+}
+
+.nouveau {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 100px;
+  height: 40px;
+  color: darkgreen;
+  background-color: #99e2d0;
+  padding: 10px 0;
+}
+
+/******** remplissage des coeurs  *******/
+.coeur-n1 {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  z-index: 1;
+  top: 8px;
+  left: -15px;
+  color: red;
+}
+
+.coeur-n2 {
+  width: 35px;
+  height: 35px;
+  color: transparent;
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: -15px;
+  transition: height 3.5s;
+}
+
+.coeur-n3 {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  left: -15px;
+  color: black;
+  background-color: transparent;
+}
+
+.coeur-n3:hover + .coeur-n2 {
+  height: 0;
+}
+
+.fond-gris {
+  background-color: #f2f2f2;
+}
+
+.fond-blanc {
+  background-color: white;
+}
+
+/********* fin du remplissage des coeurs
+/******** pages details des restaurants  *********/
+.icone-retour-accueil {
+  width: 60px;
+  height: 60px;
+  padding: 30px 0 0 25px;
+}
+
+.en-tete-logo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.texte-trs {
+  color: transparent;
+}
+
+.cadre-photo-restaurants {
+  width: 100%;
+  height: 450px;
+  margin-top: 25px;
+}
+
+.photo-header {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.menu-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-alignement {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 1400px;
+  background-color: #f2f2f2;
+  border-radius: 30px 30px 0 0;
+}
+
+.titres-restaurants {
+  display: flex;
+  position: relative;
+  font-family: "Shrikhand", "cursive";
+  font-size: 180%;
+  font-weight: normal;
+  margin: 0 0 18px 0;
+  padding: 0;
+}
+
+.menu-edition {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.titres-menu {
+  color: black;
+  margin: 25px 0 0 10px;
+}
+
+.tiret {
+  width: 50px;
+  height: 1px;
+  margin-left: 10px;
+  border: 2px solid #99e2d0;
+}
+
+.photo-restaurants {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.cadre-legend-restaurants {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+  margin: 15px 0 0 15px;
+  padding: 0;
+}
+
+.legend-retaurant {
+  font-size: 140%;
+  margin-bottom: 5px;
+}
+
+.quartier-retaurant {
+  font-size: 135%;
+}
+
+.coeurs-accueil {
+  position: relative;
+}
+
+.coeur-restaurant {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color: #f2f2f2;
+}
+
+.cadre-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 400px;
+  height: 75px;
+  position: relative;
+  background-color: #f2f2f2;
+  margin: 20px 0 0 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: mouvement;
+  animation-duration: 3s;
+}
+
+@keyframes mouvement {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 0px;
+  }
+}
+.titre-plat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 398px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titre-column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 15px 0 0 15px;
+}
+
+.description-menu {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tarif {
+  width: 45px;
+  height: 75px;
+  font-weight: bold;
+  padding: 38px 15px 0 0;
+}
+
+.validation {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 0;
+  height: 75px;
+  color: white;
+  font-size: 24px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99e2d0;
+  transition: width 3s;
+  opacity: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tourne {
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.titre-plat:hover + .validation {
+  width: 100px;
+  opacity: 1;
+}
+
+.commander {
+  display: inline-block;
+  height: 70px;
+  cursor: pointer;
+  color: white;
+  font-size: 140%;
+  background-color: #9356dc;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border-radius: 35px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 60px 0 120px 0;
+  padding: 25px 85px;
+}
+
+.commander:hover {
+  box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.8);
+  opacity: 70%;
+}
+
+/********  Pied de Page   ********/
+.block-pied-de-page {
+  width: 100%;
+  color: white;
+  background-color: black;
+  text-align: left;
+  margin: 0;
+  padding: 25px;
+}
+
+.titre-pied-de-page {
+  font-family: "Shrikhand", "Arial", "sans-serif", "cursive";
+  font-size: 150%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.liste-pied-de-page {
+  /* mode mobile */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.lignes-pied-de-page {
+  margin: 0 15px 10px 0;
+}
+
+.icon-pied-de-page-utensils {
+  padding-right: 20px;
+}
+
+.icon-pied-de-page-handshake {
+  padding-right: 14px;
+}
+
+.liens-pied-de-page {
+  font-size: 135%;
+  text-decoration: none;
+  color: white;
+}
+
+/******   Fin du Pied de Page    ********/
+/************* Media Queries  *******/
+/*** polariod en mode mobile écrans < 768px => hauteur = 325px   ****/
+.polaroid-restaurants {
+  /* mode mobile */
+  position: relative;
+  width: 95%;
+  height: 325px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/***** polaroid mode tablette ecrans entre 768 et 992 px hauteur => 450px *****/
+@media screen and (min-width: 768px) {
+  .liste-fonctionnement {
+    flex-flow: row nowrap;
+  }
+
+  .menu-fonctionnement {
+    width: 215px;
+    height: 60px;
+  }
+
+  .flex-restaurant {
+    flex-flow: row wrap;
+  }
+
+  .polaroid-restaurants {
+    width: 45%;
+    height: 250px;
+  }
+
+  .text-fonctionnement {
+    font-size: 80%;
+    margin: 10px 0 0 8px;
+  }
+
+  .macaron {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+  }
+
+  .cadre-legend-restaurants {
+    margin: 6px 0 0 15px;
+  }
+
+  .legend-retaurant {
+    font-size: 100%;
+  }
+
+  .quartier-retaurant {
+    font-size: 100%;
+  }
+
+  .liste-pied-de-page {
+    flex-flow: row nowrap;
+  }
+
+  .text-fonctionnement {
+    font-size: 80%;
+    margin-left: 15px;
+  }
+}
+/***** polaroid mode pc ecrans > 992 px => hauteur = 500px *****/
+@media screen and (min-width: 992px) {
+  .liste-fonctionnement {
+    flex-flow: row nowrap;
+  }
+
+  .menu-fonctionnement {
+    width: 280px;
+  }
+
+  .flex-restaurant {
+    flex-flow: row wrap;
+  }
+
+  .polaroid-restaurants {
+    width: 20%;
+    height: 350px;
+  }
+
+  .legend-retaurant {
+    font-size: 100%;
+  }
+
+  .quartier-retaurant {
+    font-size: 100%;
+  }
+
+  .liste-pied-de-page {
+    flex-flow: row nowrap;
+  }
+
+  .text-fonctionnement {
+    font-size: 90%;
+    margin-left: 30px;
+  }
+}
+/*****   Fin du code CSS    ********/
+
+/*# sourceMappingURL=stylesSASS02.css.map */
