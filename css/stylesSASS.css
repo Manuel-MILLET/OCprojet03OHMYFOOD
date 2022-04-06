@@ -434,16 +434,16 @@ ol, ul {
 
 /********* fin du remplissage des coeurs
 /******** pages details des restaurants  *********/
-.icone-retour-accueil {
-  width: 60px;
-  height: 60px;
-  padding: 30px 0 0 25px;
-}
-
 .en-tete-logo {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+.icone-retour-accueil {
+  width: 90px;
+  height: 90px;
+  padding: 35px;
 }
 
 .texte-trs {
@@ -552,7 +552,7 @@ ol, ul {
   height: 75px;
   position: relative;
   background-color: #f2f2f2;
-  margin: 20px 0 0 10px;
+  margin: 20px 20px 0 20px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: mouvement;
