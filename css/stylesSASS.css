@@ -193,8 +193,10 @@ ol, ul {
 }
 
 .logo-svg {
-  display: block;
-  margin: 25px 0 0 175px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .centre-logo-restaurant {
@@ -202,8 +204,8 @@ ol, ul {
   margin: 25px auto 0 auto;
 }
 
-.dimention55 {
-  width: 55%;
+.dimention60 {
+  width: 60%;
 }
 
 .dimention30 {
@@ -216,7 +218,7 @@ ol, ul {
   align-items: center;
   align-content: center;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 15px;
   background-color: #f2f2f2;
   box-shadow: 0 5px 20px -15px black inset;
   -webkit-box-shadow: 0 5px 20px -15px black inset;
@@ -244,13 +246,16 @@ ol, ul {
   background-color: #f2f2f2;
 }
 
-.slogan {
-  font-size: 130%;
-  margin: 60px 30px 15px 30px;
+.titre-slogan {
+  margin: 50px 30px 15px 30px;
 }
 
-.decouvrez {
-  font-size: 115%;
+.slogan01 {
+  font-size: 230%;
+}
+
+.slogan02 {
+  font-size: 145%;
   font-weight: normal;
   margin-top: 20px;
 }
@@ -264,7 +269,7 @@ ol, ul {
   border-radius: 35px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: none;
-  padding: 20px 30px;
+  padding: 25px 30px;
   margin: 30px 0 70px 0;
 }
 
@@ -286,7 +291,7 @@ ol, ul {
 
 .titre-fonctionnement {
   font-size: 175%;
-  margin: 60px 0 30px 30px;
+  margin: 60px 0 30px 25px;
 }
 
 .liste-fonctionnement {
@@ -390,18 +395,18 @@ ol, ul {
   z-index: 1;
   top: 8px;
   left: -15px;
-  color: red;
+  color: #ff79da;
 }
 
 .coeur-n2 {
   width: 35px;
   height: 35px;
-  color: transparent;
   position: absolute;
   z-index: 2;
   top: 8px;
   left: -15px;
   transition: height 3.5s;
+  color: transparent;
 }
 
 .coeur-n3 {
