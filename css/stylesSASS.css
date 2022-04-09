@@ -11,7 +11,7 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 09-04-2022    02h00             */
+/* 09-04-2022    08h10             */
 /***********************************/
 /*  elements de base */
 * {
@@ -573,6 +573,7 @@ ol, ul {
     top: 0px;
   }
 }
+
 .titre-plat {
   display: flex;
   flex-direction: row;
