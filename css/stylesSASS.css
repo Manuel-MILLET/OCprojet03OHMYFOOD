@@ -11,7 +11,7 @@
 /*  Manuel MILLET                  */
 /*  Projet 03 OHMYFOOD             */
 /*                                 */
-/* 09-04-2022    08h10             */
+/* 24-04-2022    08h10             */
 /***********************************/
 /*  elements de base */
 * {
@@ -219,7 +219,7 @@ ol, ul {
   align-content: center;
   width: 100%;
   margin-top: 15px;
-  background-color: #f2f2f2;
+  background-color: #eaeaea;
   box-shadow: 0 5px 20px -15px black inset;
   -webkit-box-shadow: 0 5px 20px -15px black inset;
   -moz-box-shadow: 0 5px 20px -15px black inset;
@@ -231,7 +231,7 @@ ol, ul {
   width: 185px;
   text-align: left;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #eaeaea;
   margin: 20px 0 20px 25px;
 }
 
@@ -320,6 +320,14 @@ ol, ul {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.menu-fonctionnement:hover {
+  background-color: #f5edff;
+}
+
+.menu-fonctionnement:hover > .icon {
+  color:#9356dc;
+}
+
 .macaron {
   display: flex;
   justify-content: center;
@@ -337,6 +345,7 @@ ol, ul {
 }
 
 .icon {
+  margin-left: 25px;
   padding-top: 4px;
 }
 
@@ -423,6 +432,10 @@ ol, ul {
   left: 0;
   color: black;
   background-color: transparent;
+}
+
+.coeur-n3:hover {
+  color: transparent;
 }
 
 .coeur-n3:hover + .coeur-n2 {
@@ -731,11 +744,6 @@ ol, ul {
   .polaroid-restaurants {
     width: 45%;
     height: 250px;
-  }
-
-  .text-fonctionnement {
-    font-size: 80%;
-    margin: 10px 0 0 8px;
   }
 
   .macaron {
